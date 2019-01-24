@@ -5,7 +5,7 @@ Created on Wed Jan 16 21:59:52 2019
 
 @author: aditiadeshshenoy
 """
-#Code Challenge 1: Implemented PatternCount (1.2)
+#Code Challenge 1: Implemented PatternCount (1.2.1)
 fo = open("dataset_2_10.txt", "r")
 line = fo.readlines()
 
@@ -28,7 +28,7 @@ if __name__ == '__PatternCount__':
     PatternCount()
     
  
-#Code Challenge 2: Solve the Frequent Words Problem (1.2)
+#Code Challenge 2: Solve the Frequent Words Problem (1.2.2)
 def FrequentWords(Text, k):
     fp = []
     fp1 = []
@@ -57,9 +57,11 @@ if __name__ == '__FrequentWords__':
 f1= open("dataset_3_2.txt", "r")
 lines = f1.readlines()  
 seq1 = (lines[0])
-    
+seq1 = seq1.rstrip()
+qes = open("output.txt", "a")
+
 #seq1 = 'AAAACCCGGT'
-#Code Challenge 3: Solve the Reverse Complement Problem (1.3)  
+#Code Challenge 3: Solve the Reverse Complement Problem (1.3.1)  
 def ReverseComplement(seq1):
     l = len(seq1)
     seq2 = ''
@@ -72,13 +74,35 @@ def ReverseComplement(seq1):
             seq2 += 'C'
         else:
            seq2 += 'G'
-          
-    return (seq2[::-1]
-)
+    return (seq2[::-1])
 
 
 if __name__ == '__ReverseComplement__':
     ReverseComplement()
+    
+dat = open("dataset_3_5.txt", "r")
+linez = dat.readlines()
+
+patn = (linez[0])
+patn = patn.rstrip()
+gen = (linez[1])
+
+#patn = 'ATAT'
+#gen = 'GATATATGCATATACTT'
+
+#Code Challenge 4: Solve the Pattern Matching Problem (1.3.2)  
+def PatternMatching(patn, gen):
+    l = len(patn)
+    l1 = len(gen)
+    l2 = l1 - l
+    count = ''
+    
+    for i in range(l2):
+        if gen[i : (i+len(patn))] == patn[0:]:
+           print(i, end = " ")
+    return (count)
+    
 
 
-
+if __name__ == '__PatternMatching__':
+    PatternMatching()
