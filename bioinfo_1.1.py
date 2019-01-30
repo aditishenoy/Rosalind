@@ -86,6 +86,7 @@ linez = dat.readlines()
 patn = (linez[0])
 patn = patn.rstrip()
 gen = (linez[1])
+gen = gen.rstrip()
 
 #patn = 'ATAT'
 #gen = 'GATATATGCATATACTT'
@@ -106,3 +107,21 @@ def PatternMatching(patn, gen):
 
 if __name__ == '__PatternMatching__':
     PatternMatching()
+    
+    
+def ClumpFinding(gen,k,l,t):
+    n = len(gen)-l
+    
+    for i in range(n):
+        count = {}
+        for j in range(l-k):
+            km = gen[i+j,l]
+            count(km) = count(km)+1
+        for k in count:
+            print (k)
+            if count(km)>=t:
+                print (km)
+    
+    
+if __name__ == '__ClumpFinding__':
+    ClumpFinding()
