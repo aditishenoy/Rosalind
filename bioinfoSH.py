@@ -66,17 +66,16 @@ if __name__ == '__Complement__':
     
 def Fibo(n,k):
     i = 0
-    n1 = 0
-    n2 = 1 
-    sum = n1 + n2
+    cm = 0
+    cn = 1
+    sum = 1
     while (i<=n):
-        if (n<2):
-            sum = sum
-        else:
-            n3 = k
-            sum += n3
-            n1 = n2
-            n2 = n3
+        if (i%2 == 0):
+            cn = k
+
+        else: 
+            cm = cn
+            sum += (cm + cn)
         i +=1
     
     return (sum)
@@ -86,7 +85,7 @@ if __name__ == '__Fibo__':
     Fibo()    
     
     
-    
+#def GCContent()
     
     
     
