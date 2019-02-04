@@ -84,9 +84,25 @@ def Fibo(n,k):
 if __name__ == '__Fibo__':
     Fibo()    
     
+ 
+file1 = open("rosalind_gc.txt", "r")
+line1 = file1.read().splitlines() 
+
+
+def GCContent(data):
+    c = 0
+    dic = {}
     
-#def GCContent()
+    for i in line1:
+        for j in i:
+            if j =='>':
+                name = line1[(j+1):(j+14)]
+                c+=1
+        
+    return (name)
     
+if __name__ == '__GCContent__':
+    GCContent()      
     
     
     
